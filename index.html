@@ -3,61 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hay Un Rumor – Inicio</title>
+  <title>Inicio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Header -->
   <header class="site-header">
-    <div class="logo">
-      <!-- Reemplaza con tu logo -->
-      <img src="logo.png" alt="Hay Un Rumor" />
-    </div>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Equipo</a></li>
-        <li><a href="#">Proyectos</a></li>
-        <li><a href="#">Contacto</a></li>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#reservas">Reservas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="hero">
+  <!-- Sección 1: Hero -->
+  <section id="inicio" class="hero">
     <div class="hero-content">
-      <h1>Título llamativo del sitio</h1>
-      <p>Subtítulo o descripción breve y atractiva.</p>
-      <a href="#" class="hero-button">Ver más</a>
+      <h1>Protege tu privacidad digital</h1>
+      <p>USB con Tails OS preinstalado, listo para usar.</p>
+      <a href="#nosotros" class="hero-button">Conócenos</a>
     </div>
   </section>
 
-  <main class="main-sections">
-    <section class="section services">
-      <h2>Nuestros Servicios</h2>
-      <div class="cards">
-        <div class="card">Servicio 1</div>
-        <div class="card">Servicio 2</div>
-        <div class="card">Servicio 3</div>
+  <!-- Sección 2: Servicios -->
+  <section id="servicios" class="services">
+    <h2>Servicios</h2>
+    <div class="cards-container">
+      <div class="card" data-tooltip="Sistema operativo Tails preinstalado">
+        <img src="servicio1.jpg" alt="Servicio 1" />
+        <span class="tooltip">Sistema operativo Tails preinstalado</span>
       </div>
-    </section>
+      <div class="card" data-tooltip="Privacidad garantizada con conexiones seguras">
+        <img src="servicio2.jpg" alt="Servicio 2" />
+        <span class="tooltip">Privacidad garantizada con conexiones seguras</span>
+      </div>
+      <div class="card" data-tooltip="Listo para usar, sin configuraciones previas">
+        <img src="servicio3.jpg" alt="Servicio 3" />
+        <span class="tooltip">Listo para usar, sin configuraciones previas</span>
+      </div>
+    </div>
+  </section>
 
-    <section class="section about">
-      <h2>Sobre Nosotros</h2>
-      <p>Texto descriptivo que explique quiénes somos y qué hacemos.</p>
-    </section>
+  <!-- Sección 3: Nosotros -->
+  <section id="nosotros" class="about">
+    <h2>Nosotros</h2>
+    <p>Somos apasionados por la privacidad y la seguridad digital. Creamos herramientas accesibles para proteger tu identidad online.</p>
+  </section>
 
-    <section class="section contact">
-      <h2>Contáctanos</h2>
-      <form>
-        <input type="text" placeholder="Tu nombre" required />
-        <input type="email" placeholder="Tu email" required />
-        <textarea placeholder="Tu mensaje"></textarea>
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
-  </main>
+  <!-- Sección 4: Reservas -->
+  <section id="reservas" class="reserva-hero">
+    <div class="hero-content">
+      <h2>¿Quieres apartar la tuya?</h2>
+      <p>Haz una reserva y asegura tu USB personalizada.</p>
+      <a href="reservas.html" class="hero-button">Reservas</a>
+    </div>
+  </section>
 
-  <footer class="site-footer">
-    <p>© 2025 Hay Un Rumor. Todos los derechos reservados.</p>
+  <!-- Sección 5: Contacto -->
+  <section id="contacto" class="contact">
+    <h2>Contáctanos</h2>
+    <form>
+      <input type="text" placeholder="Tu nombre" required />
+      <input type="email" placeholder="Tu correo electrónico" required />
+      <textarea placeholder="Tu mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Todos los derechos reservados.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
