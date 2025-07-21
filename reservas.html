@@ -3,107 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Reservas | 1930</title>
-  <link rel="stylesheet" href="base.css" />
-  <link rel="stylesheet" href="reservas.css" />
+  <title>Reservas - 1930 Bar</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="#reservar">Reservar</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main class="reserva-main">
-    <section class="reserva-formulario">
-      <h1>Reserva tu experiencia</h1>
-      <div class="reserva-slider">
-
-        <!-- Paso 1 -->
-        <div class="reserva-step active">
-          <h2>Número de personas</h2>
-          <input type="number" min="1" max="20" id="personas" placeholder="Ej: 2" />
-          <button onclick="nextStep()">Siguiente</button>
-        </div>
-
-        <!-- Paso 2 -->
-        <div class="reserva-step">
-          <h2>Selecciona la fecha</h2>
-          <input type="date" id="fecha" />
-          <button onclick="nextStep()">Siguiente</button>
-        </div>
-
-        <!-- Paso 3 -->
-        <div class="reserva-step">
-          <h2>Elige la hora</h2>
-          <select id="hora">
-            <option value="">Selecciona</option>
-            <option>5:00 PM</option>
-            <option>5:30 PM</option>
-            <option>6:00 PM</option>
-            <option>6:30 PM</option>
-            <option>7:00 PM</option>
-            <option>7:30 PM</option>
-            <option>8:00 PM</option>
-            <option>8:30 PM</option>
-            <option>9:00 PM</option>
-            <option>9:30 PM</option>
-            <option>10:00 PM</option>
-          </select>
-          <button onclick="nextStep()">Siguiente</button>
-        </div>
-
-        <!-- Paso 4 -->
-        <div class="reserva-step">
-          <h2>Datos personales</h2>
-          <input type="text" id="nombre" placeholder="Nombre completo" />
-          <input type="tel" id="telefono" placeholder="Teléfono" />
-          <input type="text" id="ocasión" placeholder="¿Qué ocasión es? (opcional)" />
-          <button onclick="nextStep()">Siguiente</button>
-        </div>
-
-        <!-- Paso 5 -->
-        <div class="reserva-step">
-          <h2>Confirmar</h2>
-          <p>Revisa los datos y envía tu reserva.</p>
-          <button onclick="enviarWhatsApp()">Enviar por WhatsApp</button>
-        </div>
-
+  <div class="reserva-container">
+    <div class="form-pasos">
+      <div class="paso paso-activo">
+        <h2>¿Cuántas personas?</h2>
+        <input type="number" min="1" max="20" placeholder="Ej: 4">
+        <button class="btn" onclick="siguientePaso()">Siguiente</button>
       </div>
-    </section>
-  </main>
+      <div class="paso">
+        <h2>Selecciona una fecha</h2>
+        <input type="date">
+        <button class="btn" onclick="siguientePaso()">Siguiente</button>
+      </div>
+      <div class="paso">
+        <h2>Elige la hora</h2>
+        <select>
+          <option value="">Selecciona una hora</option>
+          <option>5:00 PM</option>
+          <option>5:30 PM</option>
+          <option>6:00 PM</option>
+          <option>6:30 PM</option>
+          <option>7:00 PM</option>
+          <option>7:30 PM</option>
+          <option>8:00 PM</option>
+          <option>8:30 PM</option>
+          <option>9:00 PM</option>
+          <option>9:30 PM</option>
+          <option>10:00 PM</option>
+        </select>
+        <button class="btn" onclick="siguientePaso()">Siguiente</button>
+      </div>
+      <div class="paso">
+        <h2>Tus datos</h2>
+        <input type="text" placeholder="Nombre">
+        <input type="tel" placeholder="Teléfono">
+        <input type="email" placeholder="Correo electrónico">
+        <input type="text" placeholder="Ocasión (ej. cumpleaños)">
+        <button class="btn" onclick="siguientePaso()">Siguiente</button>
+      </div>
+      <div class="paso">
+        <h2>Confirmar reserva</h2>
+        <p>Gracias por reservar. Te contactaremos por WhatsApp para confirmar.</p>
+        <a class="btn" href="https://wa.me/573001112233?text=Hola, quiero confirmar mi reserva en 1930.">Ir a WhatsApp</a>
+      </div>
+    </div>
+  </div>
 
   <script>
-    let currentStep = 0;
-
-    function nextStep() {
-      const steps = document.querySelectorAll(".reserva-step");
-      if (currentStep < steps.length - 1) {
-        steps[currentStep].classList.remove("active");
-        currentStep++;
-        steps[currentStep].classList.add("active");
-      }
-    }
-
-    function enviarWhatsApp() {
-      const nombre = document.getElementById("nombre").value;
-      const telefono = document.getElementById("telefono").value;
-      const personas = document.getElementById("personas").value;
-      const fecha = document.getElementById("fecha").value;
-      const hora = document.getElementById("hora").value;
-      const ocasion = document.getElementById("ocasión").value;
-
-      const mensaje = `Hola, quiero reservar una mesa para ${personas} persona(s) el ${fecha} a las ${hora}.
-Nombre: ${nombre}
-Teléfono: ${telefono}
-Ocasión: ${ocasion || "Ninguna indicada"}`;
-
-      const numero = "573123456789"; // Reemplazar por número del bar
-      const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
-      window.open(url, "_blank");
+    let pasoActual = 0;
+    function siguientePaso() {
+      const pasos = document.querySelectorAll(".paso");
+      pasos[pasoActual].classList.remove("paso-activo");
+      pasoActual = Math.min(pasoActual + 1, pasos.length - 1);
+      pasos[pasoActual].classList.add("paso-activo");
     }
   </script>
 </body>
