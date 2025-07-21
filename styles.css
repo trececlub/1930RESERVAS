@@ -1,189 +1,217 @@
-/* styles.css - Estilos unificados del sitio y página de reservas */
+/* styles.css - Estilos globales del sitio web 1930 */
 
-/* ========== RESET ========== */
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #0e0e0e;
-  color: #fff;
+  font-family: 'Helvetica Neue', sans-serif;
   line-height: 1.6;
-  overflow-x: hidden;
-}
-a {
-  color: inherit;
-  text-decoration: none;
+  color: #fff;
+  background-color: #0d0d0d;
 }
 
-/* ========== LAYOUT ========== */
-.container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 20px;
-}
-section {
-  padding: 60px 20px;
-}
-
-/* ========== ENCABEZADO Y MENÚ ========== */
 header {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 1rem;
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 15px 30px;
   z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
-header nav a {
-  margin-left: 20px;
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
 }
-header nav a:hover {
-  color: #f09d51;
+
+nav a:hover {
+  color: #f39c12;
 }
 
-/* ========== BOTONES ========== */
-.boton {
-  display: inline-block;
-  padding: 12px 25px;
-  background: #f09d51;
-  color: #000;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s;
-  text-align: center;
-}
-.boton:hover {
-  background: #fff;
-}
-
-/* ========== FORMULARIO DE RESERVAS ========== */
-.reserva-wrapper {
-  display: flex;
-  width: 500%;
-  transition: transform 0.5s ease-in-out;
-}
-.formulario-reserva {
-  overflow: hidden;
-  width: 100%;
+/* Hero */
+.hero {
   height: 100vh;
-  position: relative;
-}
-.paso {
-  min-width: 100%;
-  height: 100vh;
-  padding: 60px 20px;
+  background: url('img/hero-bg.jpg') center/cover no-repeat;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.4s;
-  position: relative;
-}
-.paso h2 {
-  font-size: 28px;
-  margin-bottom: 30px;
-}
-.paso input,
-.paso select,
-.paso textarea {
-  padding: 12px;
-  width: 80%;
-  max-width: 400px;
-  margin-bottom: 20px;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-}
-.paso textarea {
-  resize: none;
-  height: 100px;
-}
-.controles {
-  margin-top: 20px;
-  display: flex;
-  gap: 10px;
-}
-
-/* ========== CONFIRMACIÓN ========== */
-.confirmacion {
   text-align: center;
-  font-size: 24px;
-  padding: 40px;
+  padding: 2rem;
 }
 
-/* ========== IMÁGENES DE SERVICIOS ========== */
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background: #f39c12;
+  color: #000;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #d35400;
+}
+
+section {
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.call-to-action {
+  background: #111;
+  padding: 4rem 2rem;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+.servicios-lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
 .servicio {
-  display: inline-block;
-  margin: 15px;
-  width: 120px;
-  height: 200px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 16px;
   position: relative;
+  width: 250px;
+}
+
+.servicio img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.info-btn {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #f39c12;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
   cursor: pointer;
-  transition: transform 0.3s;
+  color: #000;
+  transition: background 0.3s ease;
 }
-.servicio:hover {
-  transform: scale(1.05);
+
+.info-btn:hover {
+  background-color: #d35400;
 }
-.burbuja {
+
+.info-burbuja {
   position: absolute;
-  bottom: 10px;
+  bottom: 110%;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  padding: 10px 15px;
-  border-radius: 12px;
-  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000;
+  padding: 0.75rem;
+  border-radius: 10px;
   display: none;
-  z-index: 2;
+  width: 220px;
+  font-size: 0.9rem;
+  text-align: left;
 }
-.servicio.activo .burbuja {
+
+.info-burbuja.visible {
   display: block;
 }
 
-/* ========== SECCIONES DEL SITIO ========== */
-.seccion-oscura {
-  background: #121212;
-}
-.seccion-clara {
-  background: #1f1f1f;
-}
-.titulo-seccion {
-  text-align: center;
-  font-size: 32px;
-  margin-bottom: 40px;
-  color: #f09d51;
+.galeria-imgs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
-/* ========== RESPONSIVE ========== */
+.galeria-imgs img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+form input,
+form textarea {
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+form button {
+  background: #f39c12;
+  color: #000;
+  padding: 0.75rem;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #d35400;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  header {
+  nav ul {
     flex-direction: column;
-    align-items: flex-start;
+    gap: 1rem;
   }
-  .paso input,
-  .paso select,
-  .paso textarea {
-    width: 100%;
+
+  .hero-content h1 {
+    font-size: 2rem;
   }
-  .reserva-wrapper {
-    flex-direction: row;
+
+  .hero-content p {
+    font-size: 1rem;
   }
-  .servicio {
-    width: 90px;
-    height: 160px;
+
+  .servicios-lista {
+    flex-direction: column;
+  }
+
+  form {
+    padding: 1rem;
   }
 }
