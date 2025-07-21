@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reservas - 1930</title>
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="reservas.css">
+</head>
+<body>
+  <div class="reserva-wrapper">
+    <div class="form-container" id="formContainer">
+      <!-- Paso 1 -->
+      <section class="form-step active">
+        <h2>¿Cuántas personas?</h2>
+        <input type="number" id="personas" placeholder="Ej: 4" min="1" />
+        <button onclick="siguientePaso()">Siguiente</button>
+      </section>
+
+      <!-- Paso 2 -->
+      <section class="form-step">
+        <h2>Selecciona la fecha</h2>
+        <input type="date" id="fecha" />
+        <button onclick="siguientePaso()">Siguiente</button>
+      </section>
+
+      <!-- Paso 3 -->
+      <section class="form-step">
+        <h2>Selecciona la hora</h2>
+        <select id="hora">
+          <option value="">Selecciona una hora</option>
+          <script>
+            const select = document.currentScript.parentElement.querySelector("select");
+            const start = 17;
+            for (let i = 0; i <= 10; i++) {
+              let hour = start + Math.floor(i / 2);
+              let minutes = i % 2 === 0 ? "00" : "30";
+              let value = hour.toString().padStart(2, "0") + ":" + minutes;
+              select.innerHTML += `<option value="${value}">${value}</option>`;
+            }
+          </script>
+        </select>
+        <button onclick="siguientePaso()">Siguiente</button>
+      </section>
+
+      <!-- Paso 4 -->
+      <section class="form-step">
+        <h2>Datos personales</h2>
+        <input type="text" id="nombre" placeholder="Nombre completo" />
+        <input type="tel" id="telefono" placeholder="Teléfono" />
+        <input type="text" id="ocasion" placeholder="¿Qué ocasión es?" />
+        <button onclick="siguientePaso()">Siguiente</button>
+      </section>
+
+      <!-- Paso 5 -->
+      <section class="form-step">
+        <h2>Confirmar Reserva</h2>
+        <p id="resumen"></p>
+        <a id="btnConfirmar" class="btn" target="_blank">Confirmar por WhatsApp</a>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    let pasoActual = 0;
+    const pasos = document.querySelectorAll('.form-step');
+
+    function siguientePaso() {
+      if (pasoActual < pasos.length - 1) {
+        pasos[pasoActual].classList.remove('active');
+        pasoActual++;
+        pasos[pasoActual].classList.add('active');
+        document.getElementById("formContainer").style.transform = `translateX(-${pasoActual * 100}%)`;
+
+        if (pasoActual === pasos.length - 1) {
+          const nombre = document.getElementById("nombre").value;
+          const telefono = document.getElementById("telefono").value;
+          const personas = document.getElementById("personas").value;
+          const fecha = document.getElementById("fecha").value;
+          const hora = document.getElementById("hora").value;
+          const ocasion = document.getElementById("ocasion").value;
+
+          const mensaje = `Hola, quiero hacer una reserva:
+
+Nombre: ${nombre}
+Teléfono: ${telefono}
+Personas: ${personas}
+Fecha: ${fecha}
+Hora: ${hora}
+Ocasión: ${ocasion}`;
+          document.getElementById("resumen").innerText = mensaje;
+          document.getElementById("btnConfirmar").href = `https://wa.me/573001112233?text=${encodeURIComponent(mensaje)}`;
+        }
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+/* Estilos comunes */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  color: #fff;
+  background-color: #0d0d0d;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.btn {
+  background: #f39c12;
+  color: #000;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+}
+.btn:hover {
+  background: #d35400;
+}
