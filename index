@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hay Un Rumor – Inicio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">
+      <!-- Reemplaza con tu logo -->
+      <img src="logo.png" alt="Hay Un Rumor" />
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Equipo</a></li>
+        <li><a href="#">Proyectos</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Título llamativo del sitio</h1>
+      <p>Subtítulo o descripción breve y atractiva.</p>
+      <a href="#" class="hero-button">Ver más</a>
+    </div>
+  </section>
+
+  <main class="main-sections">
+    <section class="section services">
+      <h2>Nuestros Servicios</h2>
+      <div class="cards">
+        <div class="card">Servicio 1</div>
+        <div class="card">Servicio 2</div>
+        <div class="card">Servicio 3</div>
+      </div>
+    </section>
+
+    <section class="section about">
+      <h2>Sobre Nosotros</h2>
+      <p>Texto descriptivo que explique quiénes somos y qué hacemos.</p>
+    </section>
+
+    <section class="section contact">
+      <h2>Contáctanos</h2>
+      <form>
+        <input type="text" placeholder="Tu nombre" required />
+        <input type="email" placeholder="Tu email" required />
+        <textarea placeholder="Tu mensaje"></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Hay Un Rumor. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
