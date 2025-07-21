@@ -1,56 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1930 Club</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1930 - Bar</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header id="header">
+  <header>
     <nav>
       <ul>
         <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#reservas">Reservas</a></li>
         <li><a href="#servicios">Servicios</a></li>
         <li><a href="#galeria">Galería</a></li>
-        <li><a href="#contacto">Contáctanos</a></li>
+        <li><a href="#reservas">Reservas</a></li>
       </ul>
     </nav>
   </header>
 
-  <section id="inicio" class="hero">
+  <section class="hero" id="inicio">
     <div class="hero-content">
-      <h1>Bienvenidos a 1930</h1>
-      <p>Una experiencia única cada noche</p>
-      <a href="#nosotros" class="btn">Conócenos</a>
+      <h1>Bienvenido a 1930</h1>
+      <p>Un bar exclusivo en el corazón de Ibagué</p>
+      <a href="#reservas" class="btn">Reservar ahora</a>
     </div>
   </section>
 
-  <section id="nosotros">
-    <h2>Sobre Nosotros</h2>
-    <p>Historia, concepto, ambiente del bar...</p>
-  </section>
-
-  <section id="reservas" class="call-to-action">
-    <h2>Reserva tu mesa</h2>
-    <p>Haz tu reserva con nosotros de forma fácil y rápida</p>
-    <a href="reservas.html" class="btn">Reservar</a>
-  </section>
-
   <section id="servicios">
-    <h2>Servicios</h2>
+    <h2>Nuestros Servicios</h2>
     <div class="servicios-lista">
       <div class="servicio">
-        <img src="img/servicio1.jpg" alt="Servicio 1" class="img-vertical" />
-        <button class="info-btn">Ver más</button>
-        <div class="info-burbuja">Descripción del servicio 1</div>
+        <img src="img/cocktail.jpg" alt="Cócteles">
+        <button class="info-btn">Info</button>
+        <div class="info-burbuja">Cócteles de autor creados por mixólogos expertos.</div>
       </div>
       <div class="servicio">
-        <img src="img/servicio2.jpg" alt="Servicio 2" class="img-vertical" />
-        <button class="info-btn">Ver más</button>
-        <div class="info-burbuja">Descripción del servicio 2</div>
+        <img src="img/musica.jpg" alt="Música">
+        <button class="info-btn">Info</button>
+        <div class="info-burbuja">Ambiente con DJ en vivo y música de calidad.</div>
+      </div>
+      <div class="servicio">
+        <img src="img/ambiente.jpg" alt="Ambiente">
+        <button class="info-btn">Info</button>
+        <div class="info-burbuja">Espacios modernos y elegantes para tus eventos.</div>
       </div>
     </div>
   </section>
@@ -58,19 +50,16 @@
   <section id="galeria">
     <h2>Galería</h2>
     <div class="galeria-imgs">
-      <img src="img/galeria1.jpg" alt="Galería 1" />
-      <img src="img/galeria2.jpg" alt="Galería 2" />
+      <img src="img/gal1.jpg" alt="Imagen 1">
+      <img src="img/gal2.jpg" alt="Imagen 2">
+      <img src="img/gal3.jpg" alt="Imagen 3">
     </div>
   </section>
 
-  <section id="contacto">
-    <h2>Contáctanos</h2>
-    <form action="#">
-      <input type="text" placeholder="Tu nombre" required />
-      <input type="email" placeholder="Tu email" required />
-      <textarea placeholder="Tu mensaje"></textarea>
-      <button type="submit">Enviar</button>
-    </form>
+  <section class="call-to-action" id="reservas">
+    <h2>Haz tu reserva</h2>
+    <p>Te esperamos para que vivas una experiencia inolvidable.</p>
+    <a href="reservas.html" class="btn">Ir a Reservas</a>
   </section>
 
   <script>
