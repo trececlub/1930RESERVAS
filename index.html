@@ -2,37 +2,54 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>1930 Bar - Inicio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1930 Club</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#galeria">Galería</a></li>
-        <li><a href="#reservar">Reservar</a></li>
-      </ul>
-    </nav>
-  </header>
 
+  <!-- Sección 1: Hero de Bienvenida -->
   <section class="hero" id="inicio">
-    <div class="hero-content">
-      <h1>Bienvenido a 1930</h1>
-      <p>Una experiencia única de cócteles y música</p>
-      <a class="btn" href="reservas.html">Reservar</a>
+    <div class="contenido-hero">
+      <h1>1930 Club</h1>
+      <p>Descubre el secreto mejor guardado de la ciudad</p>
+      <a href="#reservas" class="boton-hero">Reservar</a>
     </div>
   </section>
 
-  <section class="call-to-action" id="servicios">
-    <h2>Lo que ofrecemos</h2>
-    <div class="servicios-lista">
-      <div class="servicio">
-        <img src="img/mixologia.jpg" alt="Mixología">
-        <button class="info-btn" onclick="toggleInfo(this)">Ver más</button>
-        <div class="info-burbuja">Cócteles de autor y clásicos reinventados.</div>
-      </div>
-      <div class="servicio">
-        <img src="img/musica.jpg" alt="Música en
+  <!-- Sección 2: Información del lugar -->
+  <section class="info">
+    <div class="contenido-info">
+      <h2>Un lugar fuera del tiempo</h2>
+      <p>Sumérgete en una experiencia única, donde el misterio, la música y los sabores se encuentran.</p>
+    </div>
+  </section>
+
+  <!-- Sección 3: Galería o contenido visual -->
+  <section class="galeria">
+    <div class="contenedor-galeria">
+      <img src="img/bar1.jpg" alt="Interior 1930" />
+      <img src="img/bar2.jpg" alt="Cocteles" />
+      <img src="img/bar3.jpg" alt="Ambiente" />
+    </div>
+  </section>
+
+  <!-- Sección 4: Imagen con texto cruzando horizontal -->
+  <section class="marquee">
+    <div class="marquee-contenido">
+      <span>Una experiencia clandestina • 1930 Club • Ibagué •</span>
+      <span>Una experiencia clandestina • 1930 Club • Ibagué •</span>
+    </div>
+  </section>
+
+  <!-- Sección 5: CTA final a Reservas -->
+  <section id="reservas" class="hero-reservas">
+    <div class="contenido-hero">
+      <h1>Haz tu reserva</h1>
+      <p>Las puertas del misterio se abren solo para quienes reservan su lugar</p>
+      <a href="reservas.html" class="boton-hero">Reservar ahora</a>
+    </div>
+  </section>
+
+</body>
+</html>
