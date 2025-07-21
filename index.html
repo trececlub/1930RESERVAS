@@ -3,82 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inicio</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>1930 Club</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <nav class="navbar">
-      <ul class="nav-links">
+  <header id="header">
+    <nav>
+      <ul>
         <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#servicios">Servicios</a></li>
         <li><a href="#nosotros">Nosotros</a></li>
         <li><a href="#reservas">Reservas</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#contacto">Contáctanos</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Sección 1: Hero -->
   <section id="inicio" class="hero">
     <div class="hero-content">
-      <h1>Protege tu privacidad digital</h1>
-      <p>USB con Tails OS preinstalado, listo para usar.</p>
-      <a href="#nosotros" class="hero-button">Conócenos</a>
+      <h1>Bienvenidos a 1930</h1>
+      <p>Una experiencia única cada noche</p>
+      <a href="#nosotros" class="btn">Conócenos</a>
     </div>
   </section>
 
-  <!-- Sección 2: Servicios -->
-  <section id="servicios" class="services">
+  <section id="nosotros">
+    <h2>Sobre Nosotros</h2>
+    <p>Historia, concepto, ambiente del bar...</p>
+  </section>
+
+  <section id="reservas" class="call-to-action">
+    <h2>Reserva tu mesa</h2>
+    <p>Haz tu reserva con nosotros de forma fácil y rápida</p>
+    <a href="reservas.html" class="btn">Reservar</a>
+  </section>
+
+  <section id="servicios">
     <h2>Servicios</h2>
-    <div class="cards-container">
-      <div class="card" data-tooltip="Sistema operativo Tails preinstalado">
-        <img src="servicio1.jpg" alt="Servicio 1" />
-        <span class="tooltip">Sistema operativo Tails preinstalado</span>
+    <div class="servicios-lista">
+      <div class="servicio">
+        <img src="img/servicio1.jpg" alt="Servicio 1" class="img-vertical" />
+        <button class="info-btn">Ver más</button>
+        <div class="info-burbuja">Descripción del servicio 1</div>
       </div>
-      <div class="card" data-tooltip="Privacidad garantizada con conexiones seguras">
-        <img src="servicio2.jpg" alt="Servicio 2" />
-        <span class="tooltip">Privacidad garantizada con conexiones seguras</span>
-      </div>
-      <div class="card" data-tooltip="Listo para usar, sin configuraciones previas">
-        <img src="servicio3.jpg" alt="Servicio 3" />
-        <span class="tooltip">Listo para usar, sin configuraciones previas</span>
+      <div class="servicio">
+        <img src="img/servicio2.jpg" alt="Servicio 2" class="img-vertical" />
+        <button class="info-btn">Ver más</button>
+        <div class="info-burbuja">Descripción del servicio 2</div>
       </div>
     </div>
   </section>
 
-  <!-- Sección 3: Nosotros -->
-  <section id="nosotros" class="about">
-    <h2>Nosotros</h2>
-    <p>Somos apasionados por la privacidad y la seguridad digital. Creamos herramientas accesibles para proteger tu identidad online.</p>
-  </section>
-
-  <!-- Sección 4: Reservas -->
-  <section id="reservas" class="reserva-hero">
-    <div class="hero-content">
-      <h2>¿Quieres apartar la tuya?</h2>
-      <p>Haz una reserva y asegura tu USB personalizada.</p>
-      <a href="reservas.html" class="hero-button">Reservas</a>
+  <section id="galeria">
+    <h2>Galería</h2>
+    <div class="galeria-imgs">
+      <img src="img/galeria1.jpg" alt="Galería 1" />
+      <img src="img/galeria2.jpg" alt="Galería 2" />
     </div>
   </section>
 
-  <!-- Sección 5: Contacto -->
-  <section id="contacto" class="contact">
+  <section id="contacto">
     <h2>Contáctanos</h2>
-    <form>
+    <form action="#">
       <input type="text" placeholder="Tu nombre" required />
-      <input type="email" placeholder="Tu correo electrónico" required />
-      <textarea placeholder="Tu mensaje" required></textarea>
+      <input type="email" placeholder="Tu email" required />
+      <textarea placeholder="Tu mensaje"></textarea>
       <button type="submit">Enviar</button>
     </form>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2025 Todos los derechos reservados.</p>
-  </footer>
-
-  <script src="script.js"></script>
+  <script>
+    document.querySelectorAll('.info-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const burbuja = btn.nextElementSibling;
+        burbuja.classList.toggle('visible');
+      });
+    });
+  </script>
 </body>
 </html>
