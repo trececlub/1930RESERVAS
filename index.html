@@ -3,47 +3,78 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Inicio - 1930</title>
-  <link rel="stylesheet" href="base.css">
-  <link rel="stylesheet" href="inicio.css">
+  <title>Bar 1930</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/inicio.css" />
 </head>
 <body>
+
+  <!-- HEADER / MENÚ -->
   <header>
     <nav>
       <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#el-rumor">El Rumor</a></li>
+        <li><a href="#servicios">Experiencia</a></li>
         <li><a href="#galeria">Galería</a></li>
-        <li><a href="reservas.html">Reservas</a></li>
+        <li><a href="#reservar">Reservar</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="hero" id="inicio">
+  <!-- HERO PRINCIPAL CON CTA -->
+  <section class="hero">
     <div class="hero-content">
-      <h1>Bienvenidos a 1930</h1>
-      <p>Una experiencia única cada noche</p>
-      <a href="reservas.html" class="btn">Reservar ahora</a>
+      <h1>Un rumor empieza a correr...</h1>
+      <p>Descúbrelo en 1930, el lugar donde la noche cobra vida.</p>
+      <a href="reservas.html" class="btn">Reserva tu experiencia</a>
     </div>
   </section>
 
-  <section class="call-to-action" id="servicios">
-    <h2>Servicios</h2>
+  <!-- SECCIÓN 1: EL RUMOR -->
+  <section id="el-rumor" class="section-dark">
+    <h2>El Rumor</h2>
+    <p>Dicen que detrás de una puerta escondida, se encuentra el lugar más enigmático de Ibagué. ¿Te atreves a vivirlo?</p>
+  </section>
+
+  <!-- SECCIÓN 2: EXPERIENCIA / SERVICIOS -->
+  <section id="servicios">
+    <h2>La Experiencia 1930</h2>
     <div class="servicios-lista">
       <div class="servicio">
-        <img src="img/servicio1.jpg" alt="Servicio 1" />
+        <img src="img/cocktail.jpg" alt="Cócteles de autor" />
         <button class="info-btn">Ver más</button>
-        <div class="info-burbuja">Información adicional sobre el servicio.</div>
+        <div class="info-burbuja">Cócteles diseñados para sorprender tu paladar.</div>
+      </div>
+      <div class="servicio">
+        <img src="img/musica.jpg" alt="Música en vivo" />
+        <button class="info-btn">Ver más</button>
+        <div class="info-burbuja">Música envolvente en un ambiente íntimo.</div>
+      </div>
+      <div class="servicio">
+        <img src="img/ambiente.jpg" alt="Ambiente exclusivo" />
+        <button class="info-btn">Ver más</button>
+        <div class="info-burbuja">Espacios con diseño de época y atmósfera única.</div>
       </div>
     </div>
   </section>
 
+  <!-- SECCIÓN 3: GALERÍA -->
   <section id="galeria">
     <h2>Galería</h2>
     <div class="galeria-imgs">
-      <img src="img/galeria1.jpg" alt="Galería 1">
-      <img src="img/galeria2.jpg" alt="Galería 2">
+      <img src="img/galeria1.jpg" alt="Ambiente 1" />
+      <img src="img/galeria2.jpg" alt="Ambiente 2" />
+      <img src="img/galeria3.jpg" alt="Ambiente 3" />
+      <img src="img/galeria4.jpg" alt="Ambiente 4" />
     </div>
   </section>
+
+  <!-- SECCIÓN 4: CTA FINAL DE RESERVA -->
+  <section id="reservar" class="call-to-action">
+    <h2>Reserva tu noche</h2>
+    <p>Elige tu fecha y acompáñanos en una experiencia privada e inolvidable.</p>
+    <a href="reservas.html" class="btn">Reservar ahora</a>
+  </section>
+
 </body>
 </html>
