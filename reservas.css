@@ -1,34 +1,96 @@
-/* Reservas - Estilo de pasos y transición */
-.reserva-wrapper {
+/* Contenedor del formulario multistep */
+.formulario-reserva {
+  max-width: 500px;
+  margin: 7rem auto 3rem;
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
   overflow: hidden;
-  width: 100%;
   position: relative;
 }
-.form-container {
+
+/* Contenedor horizontal de pasos */
+.form-steps {
   display: flex;
-  transition: transform 0.5s ease-in-out;
   width: 500%;
+  transition: transform 0.5s ease-in-out;
 }
-.form-step {
-  min-width: 100%;
-  padding: 2rem;
-  text-align: center;
+
+/* Cada paso del formulario */
+.step {
+  width: 100%;
+  flex-shrink: 0;
+  padding: 1rem;
+  transition: opacity 0.3s ease;
 }
-.form-step input,
-.form-step select {
-  padding: 0.75rem;
-  margin: 1rem 0;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 400px;
-  font-size: 1rem;
+
+/* Ocultar los pasos que no están activos */
+.step:not(.active) {
+  display: none;
 }
-.form-step.active {
+
+/* Campos de entrada */
+.step input, .step select {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #444;
+  margin-top: 0.5rem;
+}
+
+.step label {
+  margin-top: 1rem;
   display: block;
+  font-weight: 500;
+  color: #ccc;
 }
-@media (max-width: 768px) {
-  .form-step input,
-  .form-step select {
-    width: 90%;
+
+/* Botones de navegación */
+.step-buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.step-buttons button {
+  flex: 1;
+}
+
+/* Confirmación */
+.confirmacion {
+  text-align: center;
+  padding: 2rem;
+}
+
+.confirmacion h2 {
+  color: #d2b48c;
+}
+
+/* Animación de desplazamiento entre pasos */
+.step-enter {
+  animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .formulario-reserva {
+    margin: 6rem 1rem 2rem;
+    padding: 1.5rem;
+  }
+
+  .step-buttons {
+    flex-direction: column;
   }
 }
